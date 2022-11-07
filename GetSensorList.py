@@ -12,15 +12,12 @@ headers = {
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
     'user-agent': 'Yi Fang',
-#Put your unique API keys here.
-    'x-api-key': 'YOUR API KEYS',
+    'x-api-key': '791D694F-4A4F-11ED-B5AA-42010A800006',
     'x-requested-with': 'XMLHttpRequest',
 }
 
 params = {
-#Add the fields that you want to include in your data. 
-#The filed list is available at https://api.purpleair.com/
-    'fields': 'sensor_index,latitude,longitude,location_type',
+    'fields': 'sensor_index,latitude,longitude,location_type,position_rating,private,date_created,uptime',
 }
 
 response = requests.get('https://api.purpleair.com/v1/sensors',
@@ -30,10 +27,10 @@ content = response.json()
 data = content['data']
 fields = content['fields']
 location_type_index = fields.index("location_type")
+private_index = fields.index("private")
 csv_file = open("./res.csv", mode="w", encoding="utf-8")
 for item in data:
-#Here, I filter the data with only sensors have geological information and only outdoor sensors.
-    if None in item or item[location_type_index] != 0:
+    if None in item or item[private_index] != 0:
         continue
     line = ",".join('%s' % i for i in item)
     csv_file.write(line)
