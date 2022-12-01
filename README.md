@@ -23,4 +23,6 @@ Real-time: 2 days
 6-hour: 90 days
 1-day: 1 year
 
+What's more, PurpleAir ask users to stay below or around 1000 requests daily.
+
 If you have any question of how to use the code, please feel free to email me at fangyi@g.ucla.edu.
