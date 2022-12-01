@@ -22,3 +22,5 @@ Real-time: 2 days
 1-hour: 14 days
 6-hour: 90 days
 1-day: 1 year
+
+If you have any question of how to use the code, please feel free to email me at fangyi@g.ucla.edu.
