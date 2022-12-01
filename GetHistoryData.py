@@ -45,7 +45,8 @@ params = {
 df = pandas.read_csv("./LA_PAlist_PR5_LT0_2019.csv")
 # Read sensor_ind
 sensor_index = df["sensor_ind"].values
-csv_file = open("./res.csv", mode="w", encoding="utf-8")
+#Start a new csv file.
+csv_file = open("./name.csv", mode="w", encoding="utf-8")
 # Request for historical data
 for index in sensor_index:
     try:
