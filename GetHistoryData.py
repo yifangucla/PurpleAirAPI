@@ -31,9 +31,13 @@ headers = {
 }
 
 params = {
+    #Put time average period here. 60 refers to hourly average.
     'average': '60',
+    #Put the data fields that need to be download here.
     'fields': 'temperature,humidity',
+    #Start time of the data.
     'start_timestamp': str(get_time("2019-08-01 00:00:00")),
+    #End time of the data.
     'end_timestamp': str(get_time("2019-08-14 00:00:00")),
 }
 
