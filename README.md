@@ -1,17 +1,24 @@
 # PurpleAirAPI
 
-The objective of the code provided in this repository is to download the data of Purple Air sensors using the new API system.
+The objective of the code provided in this repository is to download the data of Purple Air sensors using the new API system updated July 2022.
+https://community.purpleair.com/t/new-version-of-the-purpleair-api-on-july-18th/1251
 
 You can view the Purple Air sensors' map at https://map.purpleair.com/.
 
-The repository will include code to download the sensors' list using API, and also download the historical data using API.
+The repository includes code to download the sensors' list using API, and also download the historical data using API.
 
 The official API guide of Purple Air sensor is at https://api.purpleair.com/.
 
 In order to get your API keys, you need to contact Purple Air at contact@purpleair.com.
+In order to download the historical data, you need to get your API key upgraded to have historical endpoint access.
 
-To be noticed, the PurpleAir historical API is released as of July 18, 2022. For more information, view this post: https://community.purpleair.com/t/new-version-of-the-purpleair-api-on-july-18th/1251.
+To be noticed, the historical data PurpleAir provided is unorganized (the time and date will be disordered). 
 
-The historical API can currently only query one sensor at a time. You will need to collect the sensor indexes of the devices you want to query. You can use a latitude and longitude bounding box with the Get Sensors Data request to do so. Then, you will have to request the historical data for each device.
-
-Also, the data from individual sensors will update no less than every 30 seconds. As a courtesy, The Purple Air ask that you limit the number of requests to no more than once every 1 to 10 minutes, assuming you are only using the API to obtain data from sensors. If retrieving data from multiple sensors at once, please send a single request rather than individual requests in succession.
+Also, there is a time window limitation to download historical data for one call/one request.
+Historical Endpoint Data Request Periods
+Real-time: 2 days
+10-minute : 3 days
+30-minute: 7 days
+1-hour: 14 days
+6-hour: 90 days
+1-day: 1 year
