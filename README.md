@@ -15,13 +15,21 @@ In order to download the historical data, you need to get your API key upgraded 
 To be noticed, the historical data PurpleAir provided is unorganized (the time and date will be disordered). 
 
 Also, there is a time window limitation to download historical data for one call/one request.
+
 Historical Endpoint Data Request Periods
+
 Real-time: 2 days
+
 10-minute : 3 days
+
 30-minute: 7 days
+
 1-hour: 14 days
+
 6-hour: 90 days
+
 1-day: 1 year
+
 
 What's more, PurpleAir ask users to stay below or around 1000 requests daily.
 
